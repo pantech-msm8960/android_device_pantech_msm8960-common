@@ -14,8 +14,6 @@ else
     TARGET_ENABLE_QC_AV_ENHANCEMENTS := false
 endif #TARGET_USES_QCOM_BSP
 
-$(call inherit-product, device/qcom/common/common.mk)
-
 PRODUCT_NAME := msm8960
 PRODUCT_DEVICE := msm8960
 
@@ -90,3 +88,6 @@ PRODUCT_PACKAGES += \
 AntHalService \
 libantradio \
 antradio_app
+
+# inherit pantech/qcom-common
+$(call inherit-product, device/pantech/qcom-common/qcom-common.mk)
